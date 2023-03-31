@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 
+
 class Pokemon(models.Model):
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='images/pokemon', blank=True)
@@ -15,3 +16,8 @@ class PokemonEntity(models.Model):
     lon = models.FloatField()
     appeared_at = models.DateTimeField()
     disappeared_at = models.DateTimeField()
+    level = models.IntegerField()
+    health = models.IntegerField()
+    srength = models.IntegerField()
+    defence = models.IntegerField()
+    stamina = models.IntegerField()
